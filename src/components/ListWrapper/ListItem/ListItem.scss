@@ -1,3 +1,14 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+        top: 35px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .listitem__wrapper {
     list-style: none;
     margin: 10px 0;
@@ -14,22 +25,13 @@
     border-radius: 50%;
 }
 
-.listitem__name {
-    margin: 0;
-    color: blue;
-    font-weight: 700;
+.listitem__imageNone {
+    @extend .listitem__image;
+    background:url('https://www.tuannguyen.tech/wp-content/uploads/2019/01/react.png') no-repeat;
+    background-size: cover;
 }
 
 .listitem__description {
     font-weight: 300;
 }
 
-.listitem__button {
-    font-size: 10px;
-    text-decoration: none;
-    padding: 7px 10px;
-    font-weight: 500;
-    background: none;
-    border: 2px solid blue;
-    color: blue;
-}

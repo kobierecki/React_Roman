@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ListItem.css';
+import Button from '../../Button/Button';
+import Title from '../../Title/Title';
+import './ListItem.scss';
 
 const ListItem = ({
     name,
@@ -13,15 +15,16 @@ const ListItem = ({
 
     return (
         <li className="listitem__wrapper">
-            <ImageTag src={image} className="listitem__image" alt="" />
+            <ImageTag
+                src={image}
+                className={image ? "listitem__image" : "listitem__imageNone"}
+                alt="" />
             <div>
-                <h2 className="listitem__name">
-                    {name}
-                </h2>
+                <Title>{name}</Title>
                 <p className="listitem__description">
                     {description}
                 </p>
-                <a className="listitem__button" href={twitterLink} target="blank" rel="noopener noreferrer">visit twitter page</a>
+                <Button href={twitterLink}>visit twitter page</Button>
             </div>
         </li>
     );
@@ -36,7 +39,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
     description: 'One of the descriptions',
-    image: null
+    image: null,
 }
 
 export default ListItem;
