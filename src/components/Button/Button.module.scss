@@ -1,5 +1,5 @@
 .button {
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
   padding: 7px 12px;
   font-weight: 500;
@@ -14,4 +14,12 @@
 
   background-color: #1e58ff;
   color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 4px 4px 5px rgba(41, 41, 41, 0.24);
+
+  &:hover {
+    transition-timing-function: all .2s ease-in-out;
+    transform: scale(1.1);
+  }
 }
