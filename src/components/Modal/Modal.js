@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './Modal.module.scss';
+import { MDBCloseIcon } from 'mdbreact';
 import Form from '../Form/Form';
 
 
 const Modal = ({ closeModalFn }) => (
     <div className={styles.wrapper}>
-        <button onClick={closeModalFn}>close me</button>
+        <MDBCloseIcon className={styles.btn__close} onClick={closeModalFn} />
         <Form />
     </div>
 );

@@ -1,5 +1,6 @@
 .wrapper {
-    top: 50%;
+    position: fixed;
+    top: 45%;
     transform: translateY(-50%);
     left: 0;
     right: 0;
@@ -8,9 +9,16 @@
     height: 80vh;
     background-color: #fff;
     box-shadow: 0 10px 40px -15px rgba(#818181, .5s);
-    position: fixed;
+}
 
-    button {
-        margin: 0 auto;
-    }
+.btn__close{
+    float: right;
+    margin: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #1E58FF;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }

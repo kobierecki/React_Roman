@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Input.module.scss';
 
-const Input = ({tag: Tag, name, label, maxLength}) => (
+const Input = ({ tag: Tag, type, name, label, maxLength }) => (
   <div className={styles.formItem}>
     <Tag
       className={Tag === 'textarea' ? styles.textarea : styles.input}
-      type="text"
+      type={type}
       name={name}
       id={name}
       required
