@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ArticlesView = () => (
-    <p>This is an Aarticles View</p>
+    <p>This is an Articles View</p>
 );
 
 export default ArticlesView;
