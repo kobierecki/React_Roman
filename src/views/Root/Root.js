@@ -21,18 +21,20 @@ class Root extends React.Component {
   addItem = e => {
     e.preventDefault();
 
-    // const newItem = {
-    //   name: e.target[0].value,
-    //   twitterLink: e.target[1].value,
-    //   image: e.target[2].value,
-    //   description: e.target[3].value
-    // };
+    console.log(e);
 
-    // this.setState(prevState => ({
-    //   items: [...prevState.items, newItem]
-    // }));
+    const newItem = {
+      name: e.target[0].value,
+      twitterLink: e.target[1].value,
+      image: e.target[2].value,
+      description: e.target[3].value
+    };
 
-    // e.target.reset();
+    this.setState(prevState => ({
+      items: [...prevState.items, newItem]
+    }));
+
+    e.target.reset();
   };
 
   openModal = () => {
@@ -53,7 +55,7 @@ class Root extends React.Component {
     const { isModalOpen } = this.state;
     const contextElements = {
       ...this.state,
-      addItem: this.addItem,
+      addItem: this.addItem
     }
 
     return (
